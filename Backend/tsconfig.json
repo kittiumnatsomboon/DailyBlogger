@@ -8,8 +8,10 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "target": "es6",
+    "target": "es2022",
     "types": [],
+    "moduleResolution": "nodenext",
+    "forceConsistentCasingInFileNames": true,
     // For nodejs:
     // "lib": ["esnext"],
     // "types": ["node"],
