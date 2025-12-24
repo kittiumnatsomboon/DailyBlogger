@@ -14,7 +14,7 @@ app.use(express.json());
 
 
 app.get("/", (req, res) => {
-  res.send("Hello Express + TypeScript");
+  res.send("Typescript");
 });
 
 app.listen(3000, () => {
