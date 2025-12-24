@@ -1,12 +1,22 @@
-import express = require("express");
+import express, { type Application } from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./connectdatabase/database.js"
+dotenv.config();
 
-const app = express();
-const port = 5000;
+// app router
+const app: Application = express();
+connectDB();
 
-app.get('/',(req,res)=>{
-    res.send("HELLOWORLDs"); 
-})
+// cors
+app.use(cors());
+app.use(express.json());
 
-app.listen((port),()=>{
-    console.log(`Port runtime : ${port}`)
-})
+
+app.get("/", (req, res) => {
+  res.send("Hello Express + TypeScript");
+});
+
+app.listen(3000, () => {
+  console.log("Server running on port 3000");
+});
