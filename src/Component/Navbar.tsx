@@ -1,0 +1,13 @@
+import { Link , Outlet } from "react-router-dom"
+
+export default function Navbar(){
+    return(
+    <>
+    <div>
+        
+        <Link to="/">หน้าแรก</Link>
+        <Outlet/>
+    </div>
+    </>
+    )
+}
